@@ -1,0 +1,15 @@
+@use './styles/_variables.scss';
+@use './styles/_colors.scss';
+@use './styles/_mixins.scss';
+
+main {
+  background-color: var(--primary-color);
+
+  p {
+    color: var(--secondary-color);
+  }
+}
+
+.logo {
+  max-width: 200px;
+}
