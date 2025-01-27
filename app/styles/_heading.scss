@@ -1,0 +1,153 @@
+@use './_mixins.scss';
+@use './_variables.scss';
+
+/**
+ * Generic header styles.
+ */
+
+/**
+ * Heading base.
+ */
+@mixin heading-base(
+  $font-size,
+  $line-height,
+  $color: #000000,
+  $margin: 0 0 variables.$space-150,
+  $font-weight: 900,
+  $letter-spacing: 0.01 * $font-size,
+) {
+  color: $color;
+  font-style: normal;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: $margin;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  width: auto;
+
+  &::first-letter {
+    text-transform: uppercase;
+  }
+
+  @include mixins.mq-below(variables.$bp-small) {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+  }
+}
+
+/**
+ * Heading XL (H1) primary.
+ */
+@mixin heading-xl-primary() {
+  @include heading-base(
+    $font-size: variables.$fontSize-450,
+    $line-height: variables.$space-350,
+    $margin: 0 0 variables.$space-300,
+    $font-weight: 900,
+  );
+
+  @include mixins.mq-above(variables.$bp-small) {
+    @include heading-base(
+      $font-size: variables.$fontSize-550,
+      $line-height: variables.$space-500,
+      $margin: 0 0 variables.$space-300,
+      $font-weight: 900,
+      $letter-spacing: 0.05 * variables.$fontSize-200,
+    );
+  }
+}
+
+/**
+ * Heading L (H2) primary.
+ */
+@mixin heading-large-primary() {
+  @include heading-base(
+    $font-size: variables.$fontSize-425,
+    $line-height: variables.$space-300,
+  );
+
+  @include mixins.mq-above(variables.$bp-small) {
+    @include heading-base(
+      $font-size: variables.$fontSize-450,
+      $line-height: variables.$space-375,
+    );
+  }
+}
+
+/**
+ * Heading M (H3) primary.
+ */
+@mixin heading-medium-primary() {
+  @include heading-base(
+    $font-size: variables.$fontSize-300,
+    $line-height: variables.$space-275,
+    $font-weight: 700,
+  );
+
+  @include mixins.mq-above(variables.$bp-small) {
+    @include heading-base(
+      $font-size: variables.$fontSize-400,
+      $line-height: variables.$space-300,
+      $font-weight: 700,
+    );
+  }
+}
+
+/**
+ * Heading S (H4) primary.
+ */
+@mixin heading-small-primary() {
+  @include heading-base(
+    $font-size: variables.$fontSize-400,
+    $line-height: variables.$space-300,
+    $font-weight: 700,
+    $letter-spacing: 0.02 * variables.$fontSize-400,
+  );
+
+  @include mixins.mq-above(variables.$bp-small) {
+    @include heading-base(
+      $font-size: variables.$fontSize-300,
+      $line-height: variables.$space-275,
+      $font-weight: 700,
+      $letter-spacing: 0.02 * variables.$fontSize-300,
+    );
+  }
+}
+
+/**
+ * Heading XS (H5) primary.
+ */
+@mixin heading-extra-small-primary() {
+  @include heading-base(
+    $font-size: variables.$fontSize-300,
+    $line-height: variables.$space-250,
+    $font-weight: 700,
+    $letter-spacing: 0.01 * variables.$fontSize-300,
+  );
+}
+
+h1 {
+  @include heading-xl-primary();
+}
+
+h2 {
+  @include heading-large-primary();
+}
+
+h3 {
+  @include heading-medium-primary();
+}
+
+h4 {
+  @include heading-small-primary();
+}
+
+h5 {
+  @include heading-extra-small-primary();
+}
+
+h6 {
+  @include heading-extra-small-primary();
+}

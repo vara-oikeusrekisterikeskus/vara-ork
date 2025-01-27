@@ -4,19 +4,25 @@ const pageConfig = {
       title: "Title FI",
       description: "Description FI",
       name: "Oikeuspalveluvirasto FI",
-      logo: "/logos/oikeuspalveluvirasto_fi.svg"
+      logo: "/logos/oikeuspalveluvirasto_header_fi.svg",
+      logo_height: "48px",
+      logo_footer: "/logos/oikeuspalveluvirasto_footer_fi.svg",
+      logo_height_footer: "48px",
     },
     en: {
       title: "Title EN",
       description: "Description EN",
       name: "Oikeuspalveluvirasto EN",
-      logo: "/logos/oikeuspalveluvirasto_en.svg"
+      logo: "/logos/oikeuspalveluvirasto_header_en.svg",
+      logo_height: "48px",
+      logo_footer: "/logos/oikeuspalveluvirasto_footer_en.svg",
+      logo_height_footer: "48px",
     },
     favicon: "/favicons/oikeuspalveluvirasto.png",
     contentId: "cm6ar5wcd37yg07lg8s6enpip",
     colors: {
-      primary: "#28A745",
-      secondary: "#DC3545",
+      primary: "#0A5a55",
+      secondary: "#0A5a55",
     },
   }
 }

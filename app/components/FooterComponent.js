@@ -1,4 +1,4 @@
-export default function FooterComponent({ logo, name, colors }) {
+export default function FooterComponent({ logo, logo_height, name, colors }) {
   return (
     <footer
       style={{
@@ -6,8 +6,12 @@ export default function FooterComponent({ logo, name, colors }) {
         "--secondary-color": colors.secondary,
       }}
       className="footer">
-      {logo && <img className="logo" src={logo} alt="Logo" />}
-      <h2>{name}</h2>
+      <div className="footer-wrapper">
+        <div className="footer-logo">
+          <img src={logo} height={logo_height} alt="Footer logo" />
+        </div>
+        <h3 className="footer-header">{name}</h3>
+      </div>
     </footer>
   );
 }

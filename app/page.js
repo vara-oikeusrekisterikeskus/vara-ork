@@ -24,6 +24,8 @@ export default async function Home() {
     <>
       <NavComponent
         logo={pageConfig.fi.logo}
+        logo_height={pageConfig.fi.logo_height}
+        colors={pageConfig.colors}
       />
       <main
         style={{
@@ -34,7 +36,8 @@ export default async function Home() {
         <div dangerouslySetInnerHTML={markup} />
       </main>
       <FooterComponent
-        logo={pageConfig.fi.logo}
+        logo={pageConfig.fi.logo_footer}
+        logo_height={pageConfig.fi.logo_height_footer}
         name={pageConfig.fi.name}
         colors={pageConfig.colors}
       />
