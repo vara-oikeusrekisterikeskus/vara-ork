@@ -1,4 +1,3 @@
-
 /**
  * The hard-coded page config for each site.
  */

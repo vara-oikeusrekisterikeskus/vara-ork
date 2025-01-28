@@ -1,4 +1,3 @@
-
 /**
  * Component for rendering the footer.
  *
