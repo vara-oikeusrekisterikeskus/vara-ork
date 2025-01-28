@@ -1,0 +1,46 @@
+@use './_variables.scss';
+@use './_mixins.scss';
+
+/**
+ * Navigation styles.
+ */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &--logo {
+
+    @include mixins.mq-below(variables.$bp-small) {
+      max-width: variables.$space-1000;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &--language-switcher {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      font-size: variables.$fontSize-300;
+      line-height: variables.$space-325;
+      font-weight: 400;
+      text-decoration: none;
+      color: var(--primary-color);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+}

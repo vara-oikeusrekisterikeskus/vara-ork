@@ -1,0 +1,45 @@
+@use './_variables.scss';
+@use './_mixins.scss';
+
+/**
+ * Footer styles.
+ */
+.footer {
+  background: var(--primary-secondary);
+  margin-top: variables.$space-900;
+  padding-bottom: variables.$space-750;
+
+  &--wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: variables.$space-500 variables.$padding-mobile;
+
+    @include mixins.mq-above(variables.$bp-small) {
+      padding: variables.$space-750 variables.$padding-tablet;
+    }
+
+    @include mixins.mq-above(variables.$bp-medium) {
+      padding: variables.$space-800 variables.$padding-desktop;
+    }
+  }
+
+  &--logo {
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &--header {
+    color: variables.$background;
+    margin: 0;
+
+    @include mixins.mq-below(variables.$bp-small) {
+      display: block;
+      width: 100%;
+      margin-top: variables.$space-375;
+    }
+  }
+}

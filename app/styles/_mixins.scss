@@ -19,15 +19,3 @@
     @content;
   }
 }
-
-/**
- * Media query between.
- *
- * @param {*} $bp1 - Must be set in pixels.
- * @param {*} $bp1 - Must be set in pixels.
- */
-@mixin mq-between($bp1, $bp2) {
-  @media all and (min-width: $bp1) and (max-width: $bp2 - 1px) {
-    @content;
-  }
-}

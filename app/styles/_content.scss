@@ -1,0 +1,81 @@
+@use './_variables.scss';
+
+/**
+ * Content styles.
+ */
+main {
+
+  p, a, b, em, strong, b, li, u, th, td {
+    font-size: variables.$fontSize-300;
+    line-height: variables.$space-325;
+    font-weight: 400;
+    color: variables.$text;
+  }
+
+  p, ul, ol, table {
+    margin: 0 0 variables.$space-300;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 0 variables.$space-300;
+  }
+
+  strong, b {
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:visited {
+      color: var(--primary-color);
+    }
+
+    &:hover,
+    &:focus {
+      color: variables.$background;
+      background-color: var(--primary-color);
+      text-decoration: none;
+      outline: none;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    overflow: scroll;
+    display: table;
+    width: 100%;
+
+    th {
+      text-align: left;
+      padding: variables.$space-150;
+      border: variables.$space-10 solid variables.$text;
+
+      * {
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    td {
+      text-align: left;
+      padding: variables.$space-150;
+      border: variables.$space-10 solid variables.$text;
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

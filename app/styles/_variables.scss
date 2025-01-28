@@ -37,10 +37,10 @@ $space-500: functions.remify(40px);
 $space-550: functions.remify(44px);
 $space-600: functions.remify(48px);
 $space-700: functions.remify(56px);
-
-// Max widths.
-$full-max-width: functions.remify(1440px);
-$component-max-width: functions.remify(720px);
+$space-750: functions.remify(64px);
+$space-800: functions.remify(84px);
+$space-900: functions.remify(120px);
+$space-1000: functions.remify(200px);
 
 // Font sizes.
 $fontSize-25: functions.remify(10px);
@@ -62,31 +62,21 @@ $fontSize-650: functions.remify(40px);
 $fontSize-750: functions.remify(48px);
 $fontSize-default: $fontSize-200;
 
+// Colors.
+$text: #000000;
+$background: #ffffff;
+
 /// Media query variables.
-$bp-xsmall: 420px;
 $bp-small: 768px;
 $bp-medium: 1280px;
-$bp-desktop: 1366px;
-$bp-max-width: 1440px;
 $bp-large: 1600px;
-$bp-xlarge: 1920px;
 
 // Padding variables.
 $padding-mobile: functions.remify(24px);
 $padding-tablet: functions.remify(40px);
 $padding-desktop: functions.remify(80px);
 
-$padding-mobile-px: 24px;
-$padding-tablet-px: 40px;
-$padding-desktop-px: 80px;
-
-// Margin variables.
-$margin-mobile: functions.remify(40px);
-$margin-desktop: functions.remify(80px);
-$text-component-margin-mobile: functions.remify(16px);
-$text-component-margin-desktop: functions.remify(56px);
-
 // Grid column widths.
 $grid-column-width-mobile: calc($bp-small / 4);
 $grid-column-width-tablet: calc($bp-medium / 8);
-$grid-column-width-desktop: calc($bp-max-width / 12);
+$grid-column-width-desktop: calc($bp-large / 12);
