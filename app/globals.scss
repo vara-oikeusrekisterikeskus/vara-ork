@@ -7,20 +7,14 @@
 @use './styles/_footer.scss';
 
 /**
- * Default styles.
+ * Sizing styles.
  **/
-html {
-  height: 100%;
-}
-
 body {
   background: variables.$background;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
+  height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   padding-top: variables.$padding-mobile;
 
   @include mixins.mq-above(variables.$bp-small) {
@@ -28,13 +22,12 @@ body {
   }
 }
 
-main {
-  flex: 1;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/**
- * Sizing styles.
- **/
 .container {
   width: 100%;
   margin: 0 auto;

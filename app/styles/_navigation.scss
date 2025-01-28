@@ -9,6 +9,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  width: 100%;
 
   &--logo {
 
@@ -31,11 +32,16 @@
     }
 
     a {
-      font-size: variables.$fontSize-300;
-      line-height: variables.$space-325;
+      font-size: variables.$fontSize-200;
+      line-height: variables.$space-250;
       font-weight: 400;
       text-decoration: none;
       color: var(--primary-color);
+
+      @include mixins.mq-above(variables.$bp-small) {
+        font-size: variables.$fontSize-300;
+        line-height: variables.$space-325;
+      }
 
       &:hover,
       &:focus {

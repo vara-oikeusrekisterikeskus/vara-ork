@@ -1,15 +1,27 @@
 @use './_variables.scss';
+@use './_mixins.scss';
 
 /**
  * Content styles.
  */
 main {
+  flex: 1;
+  padding-top: variables.$padding-mobile;
+
+  @include mixins.mq-above(variables.$bp-small) {
+    padding-top: variables.$padding-tablet;
+  }
 
   p, a, b, em, strong, b, li, u, th, td {
-    font-size: variables.$fontSize-300;
-    line-height: variables.$space-325;
+    font-size: variables.$fontSize-200;
+    line-height: variables.$space-250;
     font-weight: 400;
     color: variables.$text;
+
+    @include mixins.mq-above(variables.$bp-small) {
+      font-size: variables.$fontSize-300;
+      line-height: variables.$space-325;
+    }
   }
 
   p, ul, ol, table {

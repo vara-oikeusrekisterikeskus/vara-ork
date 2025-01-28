@@ -36,7 +36,7 @@ export default async function Home() {
   };
 
   return (
-    <div style={colorStyles}>
+    <div className="wrapper" style={colorStyles}>
       <NavComponent
         logo={pageConfig.fi.logo}
         logoHeight={pageConfig.fi.logoHeight}
