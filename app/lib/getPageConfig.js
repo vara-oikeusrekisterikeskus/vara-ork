@@ -1,22 +1,26 @@
+
+/**
+ * The hard-coded page config for each site.
+ */
 const pageConfig = {
   oikeuspalveluvirasto: {
     fi: {
-      title: "Title FI",
-      description: "Description FI",
-      name: "Oikeuspalveluvirasto FI",
+      title: "Oikeuspalveluviraston varasivusto",
+      description: "Oikeuspalveluviraston varasivusto.",
+      name: "Oikeuspalveluvirasto",
       logo: "/logos/oikeuspalveluvirasto_header_fi.svg",
-      logo_height: "48px",
-      logo_footer: "/logos/oikeuspalveluvirasto_footer_fi.svg",
-      logo_height_footer: "48px",
+      logoHeight: "48px",
+      logoFooter: "/logos/oikeuspalveluvirasto_footer_fi.svg",
+      logoFooterHeight: "48px",
     },
     en: {
-      title: "Title EN",
-      description: "Description EN",
-      name: "Oikeuspalveluvirasto EN",
+      title: "Backup site for National Legal Service Authority",
+      description: "Backup site for National Legal Service Authority.",
+      name: "National Legal Service Authority",
       logo: "/logos/oikeuspalveluvirasto_header_en.svg",
-      logo_height: "48px",
-      logo_footer: "/logos/oikeuspalveluvirasto_footer_en.svg",
-      logo_height_footer: "48px",
+      logoHeight: "48px",
+      logoFooter: "/logos/oikeuspalveluvirasto_footer_en.svg",
+      logoFooterHeight: "48px",
     },
     favicon: "/favicons/oikeuspalveluvirasto.png",
     contentId: "cm6ar5wcd37yg07lg8s6enpip",
@@ -27,6 +31,10 @@ const pageConfig = {
   }
 }
 
+/**
+ * Function for getting specific page config.
+ * Requires that PAGE_TYPE is set in .env.
+ */
 export default function getPageConfig() {
   const pageType = process.env.PAGE_TYPE;
   if (!pageType) {

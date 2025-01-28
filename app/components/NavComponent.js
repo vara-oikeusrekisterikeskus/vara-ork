@@ -2,26 +2,33 @@
 
 import { usePathname } from 'next/navigation';
 
-export default function NavComponent({ logo, colors, logo_height }) {
+/**
+ * Component for rendering the navigation
+ * .
+ * @param logo
+ *   The navigation logo.
+ * @param logoHeight
+ *   The navigation logo height.
+ * @return {JSX.Element}
+ * @constructor
+ */
+export default function NavComponent({ logo, logoHeight }) {
   const pathname = usePathname();
   const isEnglish = pathname.startsWith('/en');
   const switcherLink = isEnglish ? '/' : '/en';
-  const local = isEnglish ? 'fi' : 'en';
-  const switcherText = isEnglish ? 'Suomi' : 'English';
+  const locale = isEnglish ? 'fi' : 'en';
+  const switcherText = isEnglish ? 'Suomi' : 'SV/EN';
 
   return (
-    <nav
-      style={{
-        "--primary-color": colors.primary,
-        "--secondary-color": colors.secondary,
-      }}
-      className="navigation">
-      <div className="site-logo">
-        <img src={logo} height={logo_height} alt="Header logo" />
-      </div>
-      <ul className="language-switcher">
-        <li><a href={switcherLink} hrefLang={local}>{switcherText}</a></li>
-      </ul>
-    </nav>
+    <header role="banner" className="container">
+      <nav className="navigation">
+        <div className="navigation--logo">
+          <img src={logo} height={logoHeight} alt="Header logo" />
+        </div>
+        <ul className="navigation--language-switcher">
+          <li><a href={switcherLink} hrefLang={locale}>{switcherText}</a></li>
+        </ul>
+      </nav>
+    </header>
   );
 }

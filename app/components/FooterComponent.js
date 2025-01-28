@@ -1,16 +1,24 @@
-export default function FooterComponent({ logo, logo_height, name, colors }) {
+
+/**
+ * Component for rendering the footer.
+ *
+ * @param logoFooter
+ *   The footer logo.
+ * @param logoFooterHeight
+ *   The footer logos height.
+ * @param name
+ *   The name to display in the footer.
+ * @return {JSX.Element}
+ * @constructor
+ */
+export default function FooterComponent({ logoFooter, logoFooterHeight, name }) {
   return (
-    <footer
-      style={{
-        "--primary-color": colors.primary,
-        "--secondary-color": colors.secondary,
-      }}
-      className="footer">
-      <div className="footer-wrapper">
-        <div className="footer-logo">
-          <img src={logo} height={logo_height} alt="Footer logo" />
+    <footer className="footer">
+      <div className="footer--wrapper container">
+        <div className="footer--logo">
+          <img src={logoFooter} height={logoFooterHeight} alt="Footer logo" />
         </div>
-        <h3 className="footer-header">{name}</h3>
+        <h3 className="footer--header">{name}</h3>
       </div>
     </footer>
   );

@@ -3,6 +3,9 @@ import getPageConfig  from './lib/getPageConfig';
 import NavComponent from "./components/NavComponent";
 import FooterComponent from "./components/FooterComponent";
 
+/**
+ * Setup metadata for FI page.
+ */
 export async function generateMetadata() {
   const pageConfig = getPageConfig();
 
@@ -15,32 +18,37 @@ export async function generateMetadata() {
   };
 }
 
+/**
+ * Render FI page.
+ *
+ * @return {Promise<JSX.Element>}
+ * @constructor
+ */
 export default async function Home() {
   const pageConfig = getPageConfig();
-  const data = await getContent(['fi']);
-  const markup = { __html: data };
+  const content = await getContent(['fi'], pageConfig.contentId);
+  const markup = { __html: content };
+
+  const {colors} = pageConfig;
+  const colorStyles = {
+    "--primary-color": colors.primary,
+    "--secondary-color": colors.secondary,
+  };
 
   return (
-    <>
+    <div style={colorStyles}>
       <NavComponent
         logo={pageConfig.fi.logo}
-        logo_height={pageConfig.fi.logo_height}
-        colors={pageConfig.colors}
+        logoHeight={pageConfig.fi.logoHeight}
       />
-      <main
-        style={{
-          "--primary-color": pageConfig.colors.primary,
-          "--secondary-color": pageConfig.colors.secondary,
-        }}
-        role="main">
+      <main role="main" className="container">
         <div dangerouslySetInnerHTML={markup} />
       </main>
       <FooterComponent
-        logo={pageConfig.fi.logo_footer}
-        logo_height={pageConfig.fi.logo_height_footer}
+        logoFooter={pageConfig.fi.logoFooter}
+        logoFooterHeight={pageConfig.fi.logoFooterHeight}
         name={pageConfig.fi.name}
-        colors={pageConfig.colors}
       />
-    </>
+    </div>
   );
 }

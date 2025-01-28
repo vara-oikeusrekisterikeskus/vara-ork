@@ -1,21 +1,23 @@
 @use './styles/_normalize.scss';
 @use './styles/_variables.scss';
 @use './styles/_mixins.scss';
-@use './styles/_functions.scss';
 @use './styles/_heading.scss';
+@use './styles/_content.scss';
+@use './styles/_navigation.scss';
+@use './styles/_footer.scss';
 
 /**
- * DEFAULT STYLES.
+ * Default styles.
  **/
 html {
   height: 100%;
 }
 
 body {
-  background: #ffffff;
+  background: variables.$background;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -26,14 +28,17 @@ body {
   }
 }
 
+main {
+  flex: 1;
+}
+
 /**
- * SIZING STYLES.
+ * Sizing styles.
  **/
-main, nav, .footer-wrapper {
+.container {
   width: 100%;
+  margin: 0 auto;
   max-width: 4 * variables.$grid-column-width-mobile;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: variables.$padding-mobile;
   padding-right: variables.$padding-mobile;
 
@@ -44,197 +49,10 @@ main, nav, .footer-wrapper {
   }
 
   @include mixins.mq-above(variables.$bp-medium) {
-    max-width: 12 * variables.$grid-column-width-desktop + variables.$padding-desktop-px * 2;
+    max-width: 12 * variables.$grid-column-width-desktop;
     padding-left: variables.$padding-desktop;
     padding-right: variables.$padding-desktop;
   }
 }
 
-/**
- * NAVIGATION STYLES.
- **/
-.navigation {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
 
-  .site-logo {
-
-    @include mixins.mq-below(variables.$bp-small) {
-      max-width: functions.remify(200px);
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .language-switcher {
-    margin: 0;
-    padding: 0;
-
-    li {
-      list-style: none;
-    }
-
-    a {
-      font-size: functions.remify(18px);
-      line-height: functions.remify(22px);
-      font-weight: 400;
-      text-decoration: none;
-      color: var(--primary-color);
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-/**
- * CONTENT STYLES.
- **/
-main {
-  flex: 1;
-
-  p, a, b, em, strong, b, li, u {
-    font-size: variables.$fontSize-300;
-    line-height: variables.$space-325;
-    font-weight: 400;
-    color: #000000;
-    letter-spacing: 0.005 * variables.$fontSize-300;
-  }
-
-  p, ul, ol, table {
-    margin: 0 0 variables.$space-300;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    margin: 0 0 variables.$space-300;
-  }
-
-  strong, b {
-    font-weight: 600;
-  }
-
-  em {
-    font-style: italic;
-  }
-
-  a {
-    font-weight: 600;
-    color: var(--primary-color);
-    text-decoration: underline;
-    cursor: pointer;
-
-    &:visited {
-      color: var(--primary-color);
-    }
-
-    &:hover,
-    &:focus {
-      color: #ffffff;
-      background-color: var(--primary-color);
-      text-decoration: none;
-      outline: none;
-    }
-  }
-
-  table {
-    border-collapse: collapse;
-    margin: 0 0 variables.$space-300;
-    overflow: scroll;
-    display: table;
-    width: 100%;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    th {
-      font-size: variables.$fontSize-300;
-      line-height: 1.38 * variables.$fontSize-300;
-      color: #000000;
-      text-align: left;
-      padding: variables.$space-150;
-      border: variables.$space-10 solid #000000;
-      font-weight: 600;
-      letter-spacing: 0.008 * variables.$fontSize-300;
-      background-color: #ffffff;
-
-      * {
-        margin: 0;
-        padding: 0;
-      }
-    }
-
-    td {
-      font-size: variables.$fontSize-300;
-      line-height: 1.38 * variables.$fontSize-300;
-      color: #000000;
-      text-align: left;
-      padding: variables.$space-150;
-      border: variables.$space-10 solid #000000;
-
-      * {
-        margin: 0;
-        padding: 0;
-      }
-    }
-
-    tfoot th {
-      border-bottom: none;
-      border-top: 1px solid #000000;
-    }
-  }
-}
-
-/**
- * FOOTER STYLES.
- **/
-.footer {
-  background: var(--primary-color);
-  margin-top: functions.remify(120px);
-  padding-bottom: functions.remify(64px);
-
-  .footer-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: functions.remify(40px) variables.$padding-mobile;
-
-    @include mixins.mq-above(variables.$bp-small) {
-      padding: functions.remify(64px) variables.$padding-tablet;
-    }
-
-    @include mixins.mq-above(variables.$bp-medium) {
-      padding: functions.remify(84px) variables.$padding-desktop;
-    }
-  }
-
-  .footer-logo {
-
-    img {
-      display: block;
-      width: 100%;
-    }
-  }
-
-  .footer-header {
-    color: #ffffff;
-    margin: 0;
-
-    @include mixins.mq-below(variables.$bp-small) {
-      display: block;
-      width: 100%;
-      margin-top: functions.remify(30px)
-    }
-  }
-}
