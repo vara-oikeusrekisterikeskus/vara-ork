@@ -12,7 +12,7 @@
   $font-size,
   $line-height,
   $color: variables.$text,
-  $margin: 0 0 variables.$space-150,
+  $margin: 0 0 variables.$space-225,
   $font-weight: 900,
 ) {
   color: $color;
@@ -97,15 +97,15 @@
  */
 @mixin heading-small-primary() {
   @include heading-base(
-    $font-size: variables.$fontSize-400,
-    $line-height: variables.$space-300,
+    $font-size: variables.$fontSize-300,
+    $line-height: variables.$space-275,
     $font-weight: 700,
   );
 
   @include mixins.mq-above(variables.$bp-small) {
     @include heading-base(
-      $font-size: variables.$fontSize-300,
-      $line-height: variables.$space-275,
+      $font-size: variables.$fontSize-400,
+      $line-height: variables.$space-300,
       $font-weight: 700,
     );
   }
@@ -117,7 +117,7 @@
 @mixin heading-extra-small-primary() {
   @include heading-base(
     $font-size: variables.$fontSize-300,
-    $line-height: variables.$space-250,
+    $line-height: variables.$space-275,
     $font-weight: 700,
   );
 }
