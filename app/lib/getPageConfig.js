@@ -1,5 +1,28 @@
 /**
  * The hard-coded page config for each site.
+ *
+ * The main key for each object entry specifies the "machine name" for a site.
+ * This key is used in Cloudflare (and in a .env) file to pick upp the correct
+ * metadata for each site while running a build.
+ *
+ * Other fields:
+ * fi->title: The FI tile of the site.
+ * fi->description: The FI description of the site.
+ * fi->name: The FI name of the site (displayed in the footer).
+ * fi->logo: The FI header logo.
+ * fi->logoHeight: The FI header logo height.
+ * fi->logoFooter: The FI footer logo.
+ * fi->logoFooterHeight: The FI footer logo height.
+ * en->title: The EN tile of the site.
+ * en->description: The EN description of the site.
+ * en->name: The EN name of the site (displayed in the footer).
+ * en->logo: The EN header logo.
+ * en->logoHeight: The EN header logo height.
+ * en->logoFooter: The EN footer logo.
+ * en->logoFooterHeight: The EN footer logo height.
+ * favicon: The sites favicon.
+ * contentId: The content ID from Hygraph. Each site has their own content entry.
+ * colors: The primary and secondary colors of the site.
  */
 const pageConfig = {
   oikeuspalveluvirasto: {
