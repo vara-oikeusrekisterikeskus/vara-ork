@@ -9,8 +9,8 @@ import { usePathname } from 'next/navigation';
  *   The navigation logo.
  * @param logoHeight
  *   The navigation logo height.
+ *
  * @return {JSX.Element}
- * @constructor
  */
 export default function NavComponent({ logo, logoHeight }) {
   const pathname = usePathname();

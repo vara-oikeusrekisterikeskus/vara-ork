@@ -47,8 +47,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Components
 ```
-/components/FooterComponent.js: The component for the footer.
-/components/NavComponent.js: The component for the navigation.
+/components/FooterComponent.js: The component for rendering the footer.
+/components/NavComponent.js: The component for rendering the navigation.
+/components/PageComponent.js: The component for rendering a page.
 ```
 
 ### Lib

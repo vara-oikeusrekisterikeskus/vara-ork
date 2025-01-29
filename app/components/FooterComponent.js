@@ -7,8 +7,8 @@
  *   The footer logos height.
  * @param name
  *   The name to display in the footer.
+ *
  * @return {JSX.Element}
- * @constructor
  */
 export default function FooterComponent({ logoFooter, logoFooterHeight, name }) {
   return (

@@ -108,6 +108,9 @@ const pageConfig = {
 /**
  * Function for getting specific page config.
  * Requires that PAGE_TYPE is set in .env.
+ *
+ * @return
+ *   Returns page configuration.
  */
 export default function getPageConfig() {
   const pageType = process.env.PAGE_TYPE;

@@ -7,10 +7,12 @@ import { GraphQLClient } from 'graphql-request';
  * @param locales
  *   The language version of the content.
  * @param contentId
- *   THe content ID.
+ *   The content ID.
+ *
+ * @return
+ *   Returns content form Hygraph.
  */
 export default async function getContent(locales, contentId) {
-
   const queryUrl = process.env.QUERY_URL;
   if (!queryUrl) {
     throw new Error('QUERY_URL is not set.');
