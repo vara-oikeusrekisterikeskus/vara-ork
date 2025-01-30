@@ -62,6 +62,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```
 /page.js: Renders the "/" (fi) page.
 /en/page.js: Renders the "/en" page.
+/not-found.js: Renders the "404" page.
 ```
 
 ### Root layout
