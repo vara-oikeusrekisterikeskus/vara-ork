@@ -44,7 +44,7 @@ const pageConfig = {
       logoFooter: "/logos/oikeuspalveluvirasto_footer_en.svg",
       logoFooterHeight: "48px",
     },
-    favicon: "/favicons/oikeuspalveluvirasto.png",
+    favicons: "/favicons/oikeuspalveluvirasto/",
     contentId: "cm6ar5wcd37yg07lg8s6enpip",
     colors: {
       primary: "#0A5a55",
@@ -70,7 +70,7 @@ const pageConfig = {
       logoFooter: "/logos/oikeus_footer_en.svg",
       logoFooterHeight: "48px",
     },
-    favicon: null,
+    favicons: null,
     contentId: "cm6geenkv21uy07lf434hvgec",
     colors: {
       primary: "#7F261E",
@@ -96,7 +96,7 @@ const pageConfig = {
       logoFooter: "/logos/konkurssiasiamies_footer_en.svg",
       logoFooterHeight: "48px",
     },
-    favicon: "/favicons/konkurssiasiamies.png",
+    favicons: "/favicons/konkurssiasiamies/",
     contentId: "cm6geg7ay22pu07mlftug6tlq",
     colors: {
       primary: "#D64309",
