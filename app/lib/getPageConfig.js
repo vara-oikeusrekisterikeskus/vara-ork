@@ -20,7 +20,7 @@
  * en->logoHeight: The EN header logo height.
  * en->logoFooter: The EN footer logo.
  * en->logoFooterHeight: The EN footer logo height.
- * favicon: The sites favicon.
+ * favicon: The path to the favicon folder.
  * contentId: The content ID from Hygraph. Each site has their own content entry.
  * colors: The primary and secondary colors of the site.
  */
