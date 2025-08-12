@@ -25,7 +25,7 @@ Should print `v10.9.2`
 ### Create a .env file
 Create a `.env` file in the root of the project. You should specify the following keys:
 
-`PAGE_TYPE`: The machine name of a page. Available names and their metadata can be found in `getPageConfig.js`. Currently, the available names are `oikeuspalveluvirasto`, `oikeus` and `konkurssiasiamies`.
+`PAGE_TYPE`: The machine name of a page. Available names and their metadata can be found in `getPageConfig.js`. Currently, the available names are `oikeuspalveluvirasto`, `oikeus`, `konkurssiasiamies` and `ulosottolaitos`.
 
 `QUERY_URL`: This is the Hygraph URL from where content is fetched. You can get the URL by looking at the environment variables of any page instance in `Cloudflare`.
 
@@ -71,7 +71,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```
 
 ## Adding a new set of pages
-To add a new type of page to the project, simply go to `getPageConfig.js` and add an entry to the `pageConfig` object. This should be coupled with creating a new page instance in `Cloudflare`, and adding a new content entry in `Hygraph`.
+To add a new type of page to the project, simply go to `getPageConfig.js` and add an entry to the `pageConfig` object.
+
+This should be coupled with:
+1. Creating a new page instance in `Cloudflare` where you specify:
+   1. The name of the page instance.
+   2. The framework: `Next.js (Static HTML Export)`.
+   3. Build command: `npx next build`.
+   4. Build output directory: `out`.
+   5. The `PAGE_TYPE` and `QUERY_URL` env variables.
+   6. A deploy hook that can later be added to `Hygraph` in the "Webhooks" section (this takes care of updating the page when changes are done in Hygraph).
+2. Adding a new content entry in `Hygraph` from where you get the `content entry ID` that is used in `getPageConfig.js`.
+
+Should you run into trouble or have questions, it is easiest to just look at the already existing page instances and see how they have been configured.
 
 ## Style changes
 Styles can be modified in `global.scss` or in the files in the `/styles` folder.
