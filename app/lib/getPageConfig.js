@@ -102,6 +102,32 @@ const pageConfig = {
       primary: "#D64309",
       secondary: "#D64309",
     },
+  },
+  ulosottolaitos: {
+    fi: {
+      title: "Ulosottolaitoksen varasivusto",
+      description: "Ulosottolaitoksen varasivusto.",
+      name: "Ulosottolaitos",
+      logo: "/logos/ulosottolaitos/header_fi.svg",
+      logoHeight: "48px",
+      logoFooter: "/logos/ulosottolaitos/footer_fi.svg",
+      logoFooterHeight: "48px",
+    },
+    en: {
+      title: "Backup website for the National Enforcement Authority Finland",
+      description: "Backup website for the National Enforcement Authority Finland.",
+      name: "National Enforcement Authority Finland",
+      logo: "/logos/ulosottolaitos/header_en.svg",
+      logoHeight: "48px",
+      logoFooter: "/logos/ulosottolaitos/footer_en.svg",
+      logoFooterHeight: "48px",
+    },
+    favicons: null,
+    contentId: "cme87hknyhzy507laj6zyuyf6",
+    colors: {
+      primary: "#E60064",
+      secondary: "#E60064",
+    },
   }
 }
 
