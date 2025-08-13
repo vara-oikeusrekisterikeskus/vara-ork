@@ -122,7 +122,7 @@ const pageConfig = {
       logoFooter: "/logos/ulosottolaitos/footer_en.svg",
       logoFooterHeight: "48px",
     },
-    favicons: null,
+    favicons: "/favicons/ulosottolaitos/",
     contentId: "cme87hknyhzy507laj6zyuyf6",
     colors: {
       primary: "#E60064",
