@@ -128,6 +128,32 @@ const pageConfig = {
       primary: "#E60064",
       secondary: "#E60064",
     },
+  },
+  oikeusrekisterikeskus: {
+    fi: {
+      title: "Oikeusrekisterikeskuksen varasivusto",
+      description: "Oikeusrekisterikeskuksen varasivusto.",
+      name: "Oikeusrekisterikeskus",
+      logo: "/logos/oikeusrekisterikeskus/header_fi.svg",
+      logoHeight: "100px",
+      logoFooter: "/logos/oikeusrekisterikeskus/footer_fi.svg",
+      logoFooterHeight: "100px",
+    },
+    en: {
+      title: "Backup website for the Legal Register Centre",
+      description: "Backup website for the Legal Register Centre.",
+      name: "Legal Register Centre",
+      logo: "/logos/oikeusrekisterikeskus/header_en.svg",
+      logoHeight: "100px",
+      logoFooter: "/logos/oikeusrekisterikeskus/footer_en.svg",
+      logoFooterHeight: "100px",
+    },
+    favicons: false,
+    contentId: "cmeuz984req2207mhqilxmi52",
+    colors: {
+      primary: "#132E5E",
+      secondary: "#132E5E",
+    },
   }
 }
 
