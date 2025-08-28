@@ -158,16 +158,27 @@ const pageConfig = {
 }
 
 /**
+ * Function for getting the PAGE_TYPE env variable.
+ *
+ * @return
+ *   Returns PAGE_TYPE.
+ */
+export function getPageType() {
+  const pageType = process.env.PAGE_TYPE;
+  if (!pageType) {
+    throw new Error('PAGE_TYPE is not set.');
+  }
+  return pageType;
+}
+
+/**
  * Function for getting specific page config.
  * Requires that PAGE_TYPE is set in .env.
  *
  * @return
  *   Returns page configuration.
  */
-export default function getPageConfig() {
-  const pageType = process.env.PAGE_TYPE;
-  if (!pageType) {
-    throw new Error('PAGE_TYPE is not set.');
-  }
+export function getPageConfig() {
+  const pageType = getPageType();
   return pageConfig[pageType];
 }

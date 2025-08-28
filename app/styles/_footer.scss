@@ -31,6 +31,11 @@
       display: block;
       width: 100%;
     }
+
+    // Move the logo for Oikeusrekisterikeskus.
+    .wrapper.oikeusrekisterikeskus & {
+      margin-left: -15px;
+    }
   }
 
   &--header {

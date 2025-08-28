@@ -1,4 +1,4 @@
-import getPageConfig  from './lib/getPageConfig';
+import { getPageConfig } from './lib/getPageConfig';
 import PageComponent from "./components/PageComponent";
 
 /**

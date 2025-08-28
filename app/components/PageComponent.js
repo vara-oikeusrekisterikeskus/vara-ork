@@ -1,5 +1,5 @@
 import getContent from "../lib/getContent";
-import getPageConfig from "../lib/getPageConfig";
+import {getPageConfig, getPageType} from '../lib/getPageConfig';
 import NavComponent from "./NavComponent";
 import FooterComponent from "./FooterComponent";
 
@@ -18,6 +18,7 @@ export default async function PageComponent({ locale }) {
 
   const localizedConfig = pageConfig[locale];
   const { colors } = pageConfig;
+  const pageType = getPageType();
 
   const colorStyles = {
     "--primary-color": colors.primary,
@@ -25,7 +26,7 @@ export default async function PageComponent({ locale }) {
   };
 
   return (
-    <div className="wrapper" style={colorStyles}>
+    <div className={`wrapper ${pageType}`} style={colorStyles}>
       <NavComponent logo={localizedConfig.logo} logoHeight={localizedConfig.logoHeight} />
       <main role="main" className="container">
         <div dangerouslySetInnerHTML={markup} />
