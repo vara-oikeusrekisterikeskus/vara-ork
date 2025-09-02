@@ -148,7 +148,7 @@ const pageConfig = {
       logoFooter: "/logos/oikeusrekisterikeskus/footer_en.svg",
       logoFooterHeight: "100px",
     },
-    favicons: false,
+    favicons: "/favicons/oikeusrekisterikeskus/",
     contentId: "cmeuz984req2207mhqilxmi52",
     colors: {
       primary: "#132E5E",
